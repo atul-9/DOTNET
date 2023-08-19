@@ -6,25 +6,20 @@ using System.Text;
 using System.Threading.Tasks;
 namespace DataAccessLayer
 {
-    internal static class CommonClass
+    internal class CommonClass
     {
-        public static void Connect()
+        static string cnstring = "server=localhost;userid=root;password=xyz;database=shopping";
+        static MySqlConnection cn = new MySqlConnection(cnstring);
+        public static MySqlConnection Connect()
         {
-
-            string cnstring = "server=localhost;userid=root;password=xyz;database=shopping";
-            MySqlConnection cn = new MySqlConnection(cnstring);
-            MySqlCommand cmd = new MySqlCommand("select * from products", cn);
             cn.Open();
-            MySqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                Console.WriteLine(dr[s0] + "\t" + dr[1] + "\t" + dr[2]);
-
-
-            }
-            cn.Close();
-
-
+            return cn;
         }
+
+        public static void Disconnect() {
+            cn.Close();   
+            cn.Dispose();   
+}
+
     }
 }
