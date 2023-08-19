@@ -1,9 +1,10 @@
-﻿using System;
+﻿using MySqlConnector;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//using var connection = new MySqlConnection(yourConnectionString);
 namespace BusinessLogicLayer
 {
     public class Products
