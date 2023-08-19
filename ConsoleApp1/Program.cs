@@ -11,14 +11,20 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int cnt = 10;
-            float r = 3.4577f;
-            double d1 = 54565.545d;
-            decimal c1 = 589232323.6545654m;
+            Products p= new Products();
+            try
+            {
+                Console.WriteLine("Enter ProductId");
+                p.ProductId = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Product Id is Valid");
+            }
+            catch (Exception ex)
 
-
-            Console.WriteLine(r);
-            Console.WriteLine(cnt);
+            {
+                Console.WriteLine(ex.Message);
+                
+            }
+           
 
         }
     }
