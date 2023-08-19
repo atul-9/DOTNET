@@ -23,7 +23,7 @@ namespace BusinessLogicLayer
 
             }
             cn.Close();
-            1s
+            
         
         }
     }
