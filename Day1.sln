@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{7BDE1264-AD42-4329-A82F-F36948CC0C73}"
+	ProjectSection(ProjectDependencies) = postProject
+		{205D443A-A7FF-40F3-8B28-1E1B2A7D1376} = {205D443A-A7FF-40F3-8B28-1E1B2A7D1376}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "BusinessLogicLayer\BusinessLogicLayer.csproj", "{205D443A-A7FF-40F3-8B28-1E1B2A7D1376}"
 EndProject
